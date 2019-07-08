@@ -4,10 +4,7 @@ services:
 
 before_install:
     - docker build -t dockerreact -f Dockerfile.dev .
-
-script:
-    - docker run dockerreact npm run test -- --coverage
-
+        
 deploy:
     provider: elasticbeanstalk
     region: "us-east-1"
