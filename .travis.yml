@@ -1,12 +1,10 @@
+language: generic
 sudo: required
 services:
     -   docker
 
 before_install:
-    - gem install bundler
     - docker build -t dockerreact -f Dockerfile.dev .
-
-script: 'bundle exec rake spec'
 
 deploy:
   provider: elasticbeanstalk
