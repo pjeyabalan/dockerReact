@@ -17,6 +17,6 @@ deploy:
     bucket_path: "reactapp"
     on:
         branch: master
-    access_key_id: "$BEANSTALK_ACCESS_ID"
+    access_key_id: $BEANSTALK_ACCESS_ID
     secret_access_key:
         secure: "$BEANSTALK_SECRET_ID"
