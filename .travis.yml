@@ -4,16 +4,16 @@ services:
 
 before_install:
     - docker build -t dockerreact -f Dockerfile.dev .
-        
+
 deploy:
-    provider: elasticbeanstalk
-    region: "us-east-1"
-    app: "reactapp"
-    env: "Reactapp-env"
-    bucket_name: "elasticbeanstalk-us-east-1-357698814918"
-    bucket_path: "reactapp"
-    on:
-        branch: master
-    access_key_id: $BEANSTALK_ACCESS_ID
-    secret_access_key:
-        secure: "$BEANSTALK_SECRET_ID"
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "reactapp"
+  env: "Reactapp-env"
+  bucket_name: "elasticbeanstalk-us-east-1-357698814918"
+  bucket_path: "reactapp"
+  on:
+    branch: master
+  access_key_id: $BEANSTALK_ACCESS_ID
+  secret_access_key:
+    secure: "$BEANSTALK_SECRET_ID"
